@@ -1,0 +1,15 @@
+/* styles/slider.css */
+.thumb {
+    background-color: #3498db;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .track {
+    background-color: #ddd;
+    height: 8px;
+    border-radius: 4px;
+  }
+  

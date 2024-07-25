@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import ThemeProvider from '../Providers/ThemeProvider'
+import Navbar from "@/components/Navbar";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-white text-black  dark:bg-black dark:text-white">
+        
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <Navbar />
+            {children}
+          </ThemeProvider>
+
+      </body>
     </html>
   );
 }
